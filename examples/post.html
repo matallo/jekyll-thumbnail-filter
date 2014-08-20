@@ -1,0 +1,7 @@
+{% for post in site.related_posts limit:4 %}
+  {% if post.thumbnail_image %}
+    <a href="{{ post.url }}" style="background-image: url({{ post.thumbnail_image }})" alt="{{ post.title }}" class="thumbnail"></a>
+  {% else %}
+    {{ post.content | thumbnail_url: post.url, post.title }}
+  {% endif %}
+{% endfor %}
