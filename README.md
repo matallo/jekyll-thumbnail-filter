@@ -26,7 +26,7 @@ Inside the `site.related_post` loop.
 {{ post.content | thumbnail_url: post.url, post.title }}
 ```
 
-See the [exmaples](/examples) content for full examples and output, or live in the [CartoDB Blog](http://blog.cartodb.com/mobile-maps/#post-relations) which this filter was developed for.
+See the [examples](/examples) content for full examples and output, or live in the [CartoDB Blog](http://blog.cartodb.com/mobile-maps/#post-relations) which this filter was developed for.
 
 
 ## TODO
