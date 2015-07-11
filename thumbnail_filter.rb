@@ -14,7 +14,8 @@
 module Jekyll
   module ThumbnailFilter
     def thumbnail_url(input, post_url, post_title)
-      m = input.match(/src=("|')(.*?\.(?:gif|jpeg|jpg|png))/)
+      m = input.match(/("|'|\()(.*?\.(?:gif|jpeg|jpg|png))/)
+      
 
       if m.nil?
         %|<a href="#{post_url}" alt="#{post_title}" class="thumbnail"></a>|
