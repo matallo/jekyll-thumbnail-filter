@@ -31,4 +31,5 @@ See the [examples](/examples) content for full examples and output, or live in t
 
 ## TODO
 
-- Bundle the filter as a ruby gem
+- [ ] Bundle the filter as a ruby gem
+- [ ] Move output to tests

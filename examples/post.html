@@ -1,4 +1,4 @@
-{% for post in site.related_posts limit:9 %}
+{% for post in site.related_posts limit:13 %}
   {% if post.thumbnail_image %}
     <a href="{{ site.baseurl }}{{ post.url }}" style="background-image: url({{ site.baseurl }}{{ post.thumbnail_image }})" alt="{{ post.title }}" class="thumbnail"></a>
   {% else %}

@@ -14,13 +14,13 @@
 module Jekyll
   module ThumbnailFilter
     def thumbnail_url(input, post_url, post_title)
-      m = input.match(/(src=("|')|\()(http(s)?:\/\/.*)?.*(\/img\/(.*?\.(?:gif|jpeg|jpg|png|svg)))/)
+      m = input.match(/(src=("|')|\()((http|https):\/\/\S+\.(?:gif|jpeg|jpg|png|webp|svg)|.*(\/img\/\S+?\.(?:gif|jpeg|jpg|png|webp|svg)))/)
       baseurl = @context.registers[:site].config['baseurl']
 
       if m.nil?
         %|<a href="#{baseurl}#{post_url}" alt="#{post_title}" class="thumbnail"></a>|
       else
-        %|<a href="#{baseurl}#{post_url}" style="background-image: url(#{m[3] ? m[3] + m[5] : baseurl + m[5]})" alt="#{post_title}" class="thumbnail"></a>|
+        %|<a href="#{baseurl}#{post_url}" style="background-image: url(#{m[4] ? m[3] : baseurl + m[5]})" alt="#{post_title}" class="thumbnail"></a>|
       end
     end
   end
