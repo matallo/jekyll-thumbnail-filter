@@ -26,10 +26,10 @@ Inside the `site.related_post` loop.
 {{ post.content | thumbnail_url: post.url, post.title }}
 ```
 
-See the [examples](/examples) content for full examples and output, or live in the [CARTO Blog](https://carto.com/blog/welcome-to-carto-builder/#post-relations) which this filter was developed for.
+See the [examples](/examples) content for full examples and output.
 
 
 ## TODO
 
-- [ ] Bundle the filter as a ruby gem
+- [ ] Bundle the filter as a ruby gem
 - [ ] Move output to tests
